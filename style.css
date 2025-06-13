@@ -1,91 +1,81 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    background: #faf6ef;
-    color: #333;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fffaf3;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1550547660-d9450f859349') center center/cover no-repeat;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
+
+.menu-img {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.toast-msg {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #198754;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  display: none;
+  z-index: 999;
+  cursor: pointer;
+}
+#scrollTopBtn:hover {
+  background-color: #a71d2a;
+}
+
+.fade-in-page {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInPage 0.6s ease forwards;
+}
+
+@keyframes fadeInPage {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  header {
-    background: #8B0000;
-    color: #e4d1d1;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: url('bbq.jpg') no-repeat center/cover;
-    color: rgb(8, 4, 4);
-  }
-  
-  #menu, #contact {
-    padding: 2rem;
-  }
-  
-  .menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .item {
-    flex: 1 1 200px;
-    background: #fff;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: auto;
-  }
-  
-  input, textarea, button {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    background-color: #8B0000;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #a30000;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background: #8B0000;
-    color: white;
-  }
-  
+}
+
